@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_codina.mk
+    $(LOCAL_DIR)/lineage_golden.mk
