@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/codina
+LOCAL_PATH := device/samsung/golden
 
 DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
 
