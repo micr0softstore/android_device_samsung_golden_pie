@@ -1,4 +1,4 @@
-LOCAL_PATH := device/samsung/codina
+LOCAL_PATH := device/samsung/golden
 
 # DEVICE_ENABLE_SELINUX := true
 # DEVICE_SDCARD_ON_SWIPE := true
@@ -21,7 +21,7 @@ TARGET_RECOVERY_FORCE_PIXEL_FORMAT := "RGB_565"
 RECOVERY_GRAPHICS_FORCE_USE_LINELENGTH := true
 # RECOVERY_GRAPHICS_FORCE_SINGLE_BUFFER := true
 else
-TW_BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/codina/recovery/twrp-graphics.c
+TW_BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/golden/recovery/twrp-graphics.c
 endif
 TW_INTERNAL_STORAGE_PATH := "/storage/sdcard0"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard0"
@@ -57,40 +57,40 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/device_tunables.rc:root/device_tunables.rc \
     $(LOCAL_PATH)/rootdir/init.kernel.rc:root/init.kernel.rc \
-    $(LOCAL_PATH)/rootdir/init.recovery.samsungcodina.rc:root/init.recovery.samsungcodina.rc
+    $(LOCAL_PATH)/rootdir/init.recovery.samsunggolden.rc:root/init.recovery.samsunggolden.rc
 
 ifeq ($(DEVICE_WLAN_ON_NEW),true)
 # Init files new
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdirnew/init.samsungcodina.rc:root/init.samsungcodina.rc \
-    $(LOCAL_PATH)/rootdirnew/ueventd.samsungcodina.rc:root/ueventd.samsungcodina.rc
+    $(LOCAL_PATH)/rootdirnew/init.samsunggolden.rc:root/init.samsunggolden.rc \
+    $(LOCAL_PATH)/rootdirnew/ueventd.samsunggolden.rc:root/ueventd.samsunggolden.rc
 else
 # Init files old
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/init.samsungcodina.rc:root/init.samsungcodina.rc \
-    $(LOCAL_PATH)/rootdir/ueventd.samsungcodina.rc:root/ueventd.samsungcodina.rc
+    $(LOCAL_PATH)/rootdir/init.samsunggolden.rc:root/init.samsunggolden.rc \
+    $(LOCAL_PATH)/rootdir/ueventd.samsunggolden.rc:root/ueventd.samsunggolden.rc
 endif
 
 # fstab
 ifeq ($(DEVICE_SDCARD_ON_SWIPE),true)
 # fstab swipe
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdirnew/fstab.samsungcodina:root/fstab.samsungcodina
+    $(LOCAL_PATH)/rootdirnew/fstab.samsunggolden:root/fstab.samsunggolden
 else
 # fstab codina
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/fstab.samsungcodina:root/fstab.samsungcodina
+    $(LOCAL_PATH)/rootdir/fstab.samsunggolden:root/fstab.samsunggolden
 endif
 
 ifeq ($(DEVICE_UMS_ON_NEW),true)
 # UMS config
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdirnew/init.samsungcodina.usb.rc:root/init.samsungcodina.usb.rc \
+    $(LOCAL_PATH)/rootdirnew/init.samsunggolden.usb.rc:root/init.samsunggolden.usb.rc \
     $(LOCAL_PATH)/rootdirnew/ums_init.sh:system/bin/ums_init.sh
 else
 # Old config
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/init.samsungcodina.usb.rc:root/init.samsungcodina.usb.rc
+    $(LOCAL_PATH)/rootdir/init.samsunggolden.usb.rc:root/init.samsunggolden.usb.rc
 endif
 
 # TWRP
