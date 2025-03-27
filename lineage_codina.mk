@@ -1,5 +1,5 @@
 # Release name
-PRODUCT_RELEASE_NAME := GT-I8160
+PRODUCT_RELEASE_NAME := GT-I8190
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 800
@@ -12,15 +12,15 @@ $(call inherit-product, build/make/target/product/full_base_telephony.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/codina/codina.mk)
+$(call inherit-product, device/samsung/golden/codina.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_codina
-PRODUCT_DEVICE := codina
+PRODUCT_NAME := lineage_golden
+PRODUCT_DEVICE := golden
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := GT-I8160
+PRODUCT_MODEL := GT-I8190
 PRODUCT_MANUFACTURER := samsung
 #PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=GT-I8160 TARGET_DEVICE=codina
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=GT-I8190 TARGET_DEVICE=golden
