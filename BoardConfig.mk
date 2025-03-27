@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/codina
+LOCAL_PATH := device/samsung/golden
 
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 PRODUCT_VENDOR_KERNEL_HEADERS := $(LOCAL_PATH)/kernel-headers
@@ -113,7 +113,7 @@ TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_BASE := 0x40000000
-BOARD_CUSTOM_BOOTIMG_MK := device/samsung/codina/shbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/golden/shbootimg.mk
 BOARD_CANT_BUILD_RECOVERY_FROM_BOOT_PATCH := true
 TARGET_NO_TWO_STEP_RECOVERY := true
 # BOARD_KERNEL_IMAGE_NAME := zImage
@@ -158,7 +158,7 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_CUSTOM_BT_CONFIG := $(LOCAL_PATH)/configs/bluetooth/vnd_u8500.txt
 
 # RIL
-# BOARD_RIL_CLASS := ../../../device/samsung/codina/configs/ril
+# BOARD_RIL_CLASS := ../../../device/samsung/golden/configs/ril
 
 # Audio
 # BOARD_USES_LEGACY_ALSA_AUDIO := true
@@ -190,7 +190,7 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../../device/samsung/codina/recovery/recovery_keys.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../../device/samsung/golden/recovery/recovery_keys.c
 # Recovery Makefile
 # TARGET_RECOVERY_DENSITY := hdpi
 
@@ -215,18 +215,18 @@ TARGET_NEEDS_PRELINK_SUPPORT := true
 # BOARD_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
 # == BEGIN LOCAL CONFIG ==
-TARGET_OTA_ASSERT_DEVICE := codina,i8160,GT-I8160
+TARGET_OTA_ASSERT_DEVICE := golden,i8190,GT-I8190
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/codina/chrono
-TARGET_KERNEL_CONFIG := codina_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/golden
+TARGET_KERNEL_CONFIG := golden_defconfig
 # TARGET_KERNEL_CONFIG := codina_selinux_defconfig
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/configs/bluetooth/include
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.samsungcodina
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.samsunggolden
 
 # Boot Animation
 TARGET_BOOTANIMATION_PRELOAD := true
