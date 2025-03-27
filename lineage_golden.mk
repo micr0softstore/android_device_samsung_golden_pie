@@ -12,7 +12,7 @@ $(call inherit-product, build/make/target/product/full_base_telephony.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/golden/codina.mk)
+$(call inherit-product, device/samsung/golden/golden.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_golden
