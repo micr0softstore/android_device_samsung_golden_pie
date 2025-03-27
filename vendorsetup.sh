@@ -1,2 +1,2 @@
-add_lunch_combo lineage_codina-eng
-add_lunch_combo lineage_codina-userdebug
+add_lunch_combo lineage_golden-eng
+add_lunch_combo lineage_golden-userdebug
