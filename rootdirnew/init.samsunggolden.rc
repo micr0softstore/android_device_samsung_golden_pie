@@ -1,5 +1,5 @@
 import /device_tunables.rc
-import /init.samsungcodina.usb.rc
+import /init.samsunggolden.usb.rc
 
 on early-init
     write /sys/class/backlight/panel/brightness 70
