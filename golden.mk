@@ -42,6 +42,15 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/fstab.samsunggolden:$(TARGET_COPY_OUT_RAMDISK)/fstab.samsunggolden \
     $(LOCAL_PATH)/rootdir/init.ste.rc:root/init.ste.rc \
     $(LOCAL_PATH)/rootdir/init.samsunggolden.usb.rc:root/init.samsunggolden.usb.rc
+#    $(LOCAL_PATH)/rootdir/lpm.rc:root/lpm.rc
+
+# Recovery ramdisk, libraries and modules.
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/rootdir/etc/recovery.fstab:recovery/root/etc/recovery.fstab \
+    $(LOCAL_PATH)/recovery/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab \
+    $(LOCAL_PATH)/recovery/rootdir/sbin/libkeyutils.so:recovery/root/sbin/libkeyutils.so \
+    $(LOCAL_PATH)/recovery/rootdir/sbin/libsec_km.so:recovery/root/sbin/libsec_km.so \
+    $(LOCAL_PATH)/recovery/rootdir/sbin/libsec_ecryptfs.so:recovery/root/sbin/libsec_ecryptfs.so 
 
 # Media
 ifeq ($(DEVICE_ENABLE_LOV),true)
@@ -359,7 +368,7 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/adm.sqlite-u8500:system/etc/adm.sqlite-u8500
+    $(LOCAL_PATH)/configs/adm.sqlite-u8500:system/etc/adm.sqlite-ab8505_v2
 
 # GPS
 PRODUCT_COPY_FILES += \
