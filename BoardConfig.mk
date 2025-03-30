@@ -17,6 +17,8 @@
 
 LOCAL_PATH := device/samsung/golden
 
+-include device/samsung/golden/twrp.mk
+
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 PRODUCT_VENDOR_KERNEL_HEADERS := $(LOCAL_PATH)/kernel-headers
 
