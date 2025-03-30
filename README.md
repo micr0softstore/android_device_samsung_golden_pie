@@ -7,7 +7,7 @@ https://github.com/micr0softstore/android_kernel_samsung_golden (branch 3.4-and1
 Build Passing: idk, didin't try yet
 Booting: idk but i hope so
 
-Little ifo what is this:
+Little info what is this:
 This is basically a lineageos 16 device tree forked from codina (originally maintained by Chrono) and im trying to get it working o the S3 Mini, because golden has the same SoC family as codina 
 
 Interested In Helpig me?
